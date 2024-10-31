@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/li__1_-removebg-preview.ico' %}">
+    <title>Contribute</title>
+    <!--Font awesome-->
+    <script src="https://kit.fontawesome.com/456d64337e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/mpesa-donate.css' %}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="body">
+        <div class="donation-container">
+            <div class="donation-header">
+                <img src="{% static 'images/mpesa-logo.png' %}" alt="M-Pesa Logo" class="mpesa-logo">
+                <h3>Donate by M-Pesa via M-Changa</h3>
+            </div>
+            <p>This project is eligible to accept Kenyan Shilling (KES) donations via M-Pesa through a partnership with <strong>M-Changa</strong>.</p>
+            <ol>
+                <li>Select <strong>“Pay Bill”</strong> from the M-Pesa menu.</li>
+                <li>Enter the <strong>M-Changa business number 891300</strong></li>
+                <li>Enter your new GlobalGiving account number <strong>GG63586</strong></li>
+                <li>Enter the <strong>amount</strong> you wish to pay</li>
+                <li>Enter your <strong>M-Pesa PIN</strong></li>
+                <li><strong>Confirm</strong> that all details are correct</li>
+                <li>You will receive a confirmation of the transaction via <strong>SMS</strong></li>
+            </ol>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+
+</body>
+</html>

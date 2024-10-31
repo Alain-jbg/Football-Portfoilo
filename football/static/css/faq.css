@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root {
+    --green: #27ae60;
+    --black: #192a56;
+    --light-color: grey;
+    --white: #F6F2F2;
+    --box-shadow: 0.5rem 1.5rem rgba(0,0,0,.1)
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-text {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.top-text h1 {
+    color: var(--black);
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.top-text p {
+    color: var(--green);
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.faq-section {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.faq-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.faq-section li {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #192a56c7;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.faq-section li:hover {
+    background-color: var(--black);
+}
+
+@media (max-width: 991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .top-text {
+        margin-top: 50px;
+    }
+}

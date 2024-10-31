@@ -1,0 +1,137 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/li__1_-removebg-preview.ico' %}">
+    <title>Game Highlights</title>
+
+    <!--Font awesome-->
+    <script src="https://kit.fontawesome.com/456d64337e.js" crossorigin="anonymous"></script>
+
+    <!--Css-->
+    <link rel="stylesheet" href="{% static 'css/match-report.css' %}">
+</head>
+<body>
+    <header>
+        <a href="{% url 'home' %}">
+            <img src="{% static 'images/li__1_-removebg-preview.png' %}" alt="logo">
+        </a>
+    </header>
+    <!-- <h1 class="heading">Ligi Open News & Highlights</h1>
+    <div class="results-section">
+      {% for fixture in fixtures %}
+      <article class="fixture">
+          <div class="date">
+              <p class="date-fix">{{ fixture.date }}</p>
+              <p class="comp">{{ fixture.competition.name }}</p>
+          </div>
+          <div class="inner-team">
+              <div class="team">
+                  <img src="{{ fixture.team_a_logo.url }}" alt="Logo of {{ fixture.home_team.name }}">
+                  <span class="team-name">{{ fixture.home_team.name }}</span>
+              </div>
+              <div class="demo">
+                  <div class="vs">{{ fixture.home_team_score }} - {{ fixture.away_team_score }}</div>
+                  <p class="venue">{{ fixture.venue }}</p>
+              </div>
+              <div class="team">
+                  <img src="{{ fixture.team_b_logo.url }}" alt="Logo of {{ fixture.away_team.name }}">
+                  <span class="team-name">{{ fixture.away_team.name }}</span>
+              </div>
+          </div>
+          <div class="goal-details">
+              <div class="home">
+                  {% for goal in fixture.goal_details.all %}
+                      {% if goal.team == fixture.home_team %}
+                      <p>{{ goal.player_name }} {{ goal.minute }}' <i class="fa-solid fa-futbol" aria-hidden="true"></i></p>
+                      {% endif %}
+                  {% endfor %}
+              </div>
+              <div class="away">
+                  {% for goal in fixture.goal_details.all %}
+                      {% if goal.team == fixture.away_team %}
+                      <p>{{ goal.player_name }} {{ goal.minute }}' <i class="fa-solid fa-futbol" aria-hidden="true"></i></p>
+                      {% endif %}
+                  {% endfor %}
+              </div>
+          </div>
+      </article>
+      {% endfor %}
+    </div>
+
+   <div class="news-content">
+    <h1 class="sub-heading">Report: {{ team_a_name }} 2-2 {{ team_b_name }}</h1>
+    <div class="author">
+        <div class="author-name"> 
+            <img src="{% static 'images/news-demo/avatar-mark-webber.webp' %}" alt="author-avatar">
+            <p>by {{ author_name }}</p>
+        </div>
+        <p class="news-date">{{ match_date }}</p>
+    </div>
+    <hr />
+
+    <div class="top-images">
+        <img src="{% static 'images/news-demo/amenities.jpg' %}" alt="stadium-turf">
+        <div class="top-images-sub">
+            <img src="{% static 'images/news-demo/lineup-3.webp' %}" alt="team-lineup">
+            <img src="{% static 'images/news-demo/lineup-2.jpg' %}" alt="team-lineup">
+        </div>
+    </div>
+    <div class="main-content">
+        <h3>{{ match_summary }}</h3>
+        <div class="first-half">
+            <h3 class="halves">First half</h3>
+            <p>{{ first_half_summary }}</p>
+        </div>
+        <div class="half-imgs" id="slider-1">
+            <div class="slider">
+                <img id="img-1" src="{% static 'images/news-demo/preview-2.jpg' %}" alt="Image 1"/>
+                <img id="img-2" src="{% static 'images/news-demo/player.JPG' %}" alt="Image 2"/>
+                <img id="img-3" src="{% static 'images/news-demo/preview-3.webp' %}" alt="Image 3"/>
+            </div>
+            <div class="navigation-button">
+                <span class="dot active" onclick="changeSlide1(0)"></span>
+                <span class="dot" onclick="changeSlide1(1)"></span>
+                <span class="dot" onclick="changeSlide1(2)"></span>
+            </div>
+        </div>
+        <div class="second-half">
+            <h3 class="halves">Second half</h3>
+            <p>{{ second_half_summary }}</p>
+        </div>
+        <div class="half-imgs" id="slider-2">
+            <div class="slider">
+                <img id="img-1" src="{% static 'images/news-demo/preview-4.jpg' %}" alt="Image 1"/>
+                <img id="img-2" src="{% static 'images/news-demo/preview-5.jpg' %}" alt="Image 2"/>
+                <img id="img-3" src="{% static 'images/news-demo/preview-6.webp' %}" alt="Image 3"/>
+            </div>
+            <div class="navigation-button">
+                <span class="dot active" onclick="changeSlide2(0)"></span>
+                <span class="dot" onclick="changeSlide2(1)"></span>
+                <span class="dot" onclick="changeSlide2(2)"></span>
+            </div>
+        </div>
+        <div class="lineups">
+            <h3 class="halves">The Teams</h3>
+            <div class="lineups-home">
+                <p><strong>Team A: </strong>{{ team_a_lineup }}</p>
+                <p><strong>Unused substitutes: </strong>{{ team_a_substitutes }}</p>
+                <p><strong>Booked: </strong>{{ team_a_booked }}</p>
+                <p><strong>Goalscorers: </strong>{{ team_a_goalscorers }}</p>
+            </div>
+            <div class="lineups-away">
+                <p><strong>Team B: </strong>{{ team_b_lineup }}</p>
+                <p><strong>Unused substitutes: </strong>{{ team_b_substitutes }}</p>
+                <p><strong>Booked: </strong>{{ team_b_booked }}</p>
+                <p><strong>Goalscorers: </strong>{{ team_b_goalscorers }}</p>
+            </div>
+            <p class="referee"><strong>Referee: </strong>{{ referee_name }}</p>
+        </div>
+    </div>
+</div> -->
+    <script src="{% static 'js/match-report.js' %}"></script>
+</body>
+</html>

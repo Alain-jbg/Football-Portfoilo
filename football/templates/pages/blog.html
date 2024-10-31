@@ -1,0 +1,50 @@
+<!-- templates/pages/blog.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/li__1_-removebg-preview.ico' %}">
+    <title>Blog</title>
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/456d64337e.js" crossorigin="anonymous"></script>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+    <header>
+        <a href="{% url 'home' %}">
+            <img src="{% static 'images/li__1_-removebg-preview.png' %}" alt="logo">
+        </a>
+    </header>
+    
+    {% for article in blog_posts %}
+    <div id="hero">
+        <h1 class="title">{{ article.title }}</h1>
+    </div>
+    <div class="container">
+        <div class="author">
+            <div class="author-name"> 
+                <img src="{{ article.author_image.url }}" alt="author-avatar">
+                <p>by {{ article.author }}</p>
+            </div>
+            <p class="news-date">{{ article.date_published|date:"D M d Y" }}</p>
+        </div>
+        <hr />
+        <div class="main-content">
+            <!-- <img src="{{ article.image.url }}" alt="Blog Image" class="blog-image"> -->
+            <div class="text">
+                {{ article.content|safe }}
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p>No blog posts available.</p>
+    {% endfor %}
+    
+    <script src="{% static 'js/blog.js' %}"></script>
+</body>
+</html>
